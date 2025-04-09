@@ -21,7 +21,7 @@ echo "ComfyUI Launcher is starting..."
 echo
 echo
 
-cd server/
+cd server/ || exit
 
 # start Celery worker in the bg
 celery -A server.celery_app --workdir=. worker --loglevel=DEBUG &
